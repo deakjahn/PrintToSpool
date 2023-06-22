@@ -24,7 +24,7 @@ you have the source. :-)
 
 ## Note
 
-I saw another solution here and there on the web that suggests to copy the already existing printing shortcut from `shell:PrintersFolder` to `shell:sendTo`. Unfortunately,
+I saw another solution here and there on the web that suggests to copy the already existing printer shortcut from `shell:PrintersFolder` to `shell:sendTo`. Unfortunately,
 that doesn't work, it will still expect document files (eg. a `.txt`) to process, not a raw print file. That's why I decided to write this one...
 
 Enjoy it.
