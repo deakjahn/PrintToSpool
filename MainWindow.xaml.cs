@@ -59,24 +59,24 @@ namespace PrintToSpool {
 
     [DllImport("winspool.drv", SetLastError = true, CharSet = CharSet.Ansi)]
     [SuppressMessage("Globalization", "CA2101:Specify marshaling for P/Invoke string arguments")]
-    private static extern bool OpenPrinter([MarshalAs(UnmanagedType.LPStr)] string szPrinter, out IntPtr hPrinter, IntPtr pd);
+    private static extern bool OpenPrinter([MarshalAs(UnmanagedType.LPStr)] string szPrinter, out nint hPrinter, nint pd);
 
     [DllImport("winspool.drv", SetLastError = true, CharSet = CharSet.Ansi)]
-    private static extern bool StartDocPrinter(IntPtr hPrinter, int level, [In, MarshalAs(UnmanagedType.LPStruct)] DOCINFO di);
+    private static extern bool StartDocPrinter(nint hPrinter, int level, [In, MarshalAs(UnmanagedType.LPStruct)] DOCINFO di);
 
     [DllImport("winspool.drv", SetLastError = true)]
-    private static extern bool EndDocPrinter(IntPtr hPrinter);
+    private static extern bool EndDocPrinter(nint hPrinter);
 
     [DllImport("winspool.drv", SetLastError = true)]
-    private static extern bool StartPagePrinter(IntPtr hPrinter);
+    private static extern bool StartPagePrinter(nint hPrinter);
 
     [DllImport("winspool.drv", SetLastError = true)]
-    private static extern bool EndPagePrinter(IntPtr hPrinter);
+    private static extern bool EndPagePrinter(nint hPrinter);
 
     [DllImport("winspool.Drv", SetLastError = true)]
-    private static extern bool WritePrinter(IntPtr hPrinter, in byte pBytes, int dwCount, out int dwWritten);
+    private static extern bool WritePrinter(nint hPrinter, in byte pBytes, int dwCount, out int dwWritten);
 
     [DllImport("winspool.Drv", SetLastError = true)]
-    private static extern bool ClosePrinter(IntPtr hPrinter);
+    private static extern bool ClosePrinter(nint hPrinter);
   }
 }
