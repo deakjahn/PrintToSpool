@@ -4,12 +4,13 @@ A simple utility to send a (raw) print file directly to a printer on Windows.
 
 ## Setting up
 
-1. Compile the program. It will compile to a single `.exe` executable in the `bin\Release\net6.0-windows\publish` folder, you can ignore the `.pdb` file.
+1. Compile the program (not `Build` but `Publish`). Building should work, too, but only Publish is able to bundle it into a single executable in the current .NET era.
+Find the single `.exe` executable in the `bin\Release\net6.0-windows\publish` folder, you can ignore the `.pdb` file.
 
 2. Copy the executable to wherever you please.
 
-3. Open _File Explorer_, type `shell:sendTo` into the address bar. Create a shortcut here (`context menu > New > Shortcut`) or, alternatively, create a shortcut to the Desktop
-for the executable and drag-and-drop it here). It could be named as your printer. Go back into _Properties,_ select an icon you like (an obvious choice would be the printer icon
+3. Open _File Explorer_, type `shell:sendTo` into the address bar. Create a shortcut here (`context menu > New > Shortcut`), point it to the exe (or, alternatively, create a shortcut
+to the Desktop and drag-and-drop it here). Practically, name it as your printer. Go back into _Properties,_ select an icon you like (an obvious choice would be the printer icon
 from `SHELL32.dll` but do as you please). Make sure your target is:
 
 ```
@@ -24,7 +25,7 @@ you have the source. :-)
 ## Note
 
 I saw another solution here and there on the web that suggests to copy the already existing printing shortcut from `shell:PrintersFolder` to `shell:sendTo`. Unfortunately,
-that doesn't work, it will still want document files (eg. a TXT) to process, not a raw print file. That's why I decided to write this one...
+that doesn't work, it will still expect document files (eg. a `.txt`) to process, not a raw print file. That's why I decided to write this one...
 
 Enjoy it.
 
