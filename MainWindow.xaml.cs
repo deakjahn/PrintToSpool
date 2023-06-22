@@ -21,13 +21,17 @@ namespace PrintToSpool {
           pDataType = "RAW"
         };
 
-        bool success = false;
+        bool success = true;
         if (OpenPrinter(PrinterName, out nint hPrinter, IntPtr.Zero)) {
           if (StartDocPrinter(hPrinter, 1, DocInfo)) {
             if (StartPagePrinter(hPrinter)) {
-              ReadOnlySpan<byte> bytes = File.ReadAllBytes(file);
-              ref readonly byte pBytes = ref MemoryMarshal.AsRef<byte>(bytes);
-              success = WritePrinter(hPrinter, in pBytes, bytes.Length, out int _);
+              byte[] buffer = new byte[5 * 1024 * 1024];
+              using var stream = new FileStream(file, FileMode.Open);
+              int read;
+              while (success && (read = stream.Read(buffer, 0, buffer.Length)) > 0) {
+                ref readonly byte pBuffer = ref MemoryMarshal.AsRef<byte>(buffer);
+                success = WritePrinter(hPrinter, in pBuffer, read, out int _);
+              }
               EndPagePrinter(hPrinter);
             }
             EndDocPrinter(hPrinter);
