@@ -19,7 +19,7 @@ from `SHELL32.dll` but do as you please). Make sure your target is:
 One argument, not two, the print file will be added automatically by Windows. Make sure you type the printer's name exactly as visible in `Settings > Printers & Scanners`.
 
 4. To test, find a print file, right click for the context menu, `Send To > your new printer shortcut` and it should appear from the printer all right. If it doesn't, debug it,
-1. you have the source. :-)
+you have the source. :-)
 
 ## Note
 
