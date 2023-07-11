@@ -7,7 +7,12 @@
     <UseWPF>true</UseWPF>
     <PublishSingleFile>True</PublishSingleFile>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ApplicationIcon>Printer.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Printer.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Properties\" />

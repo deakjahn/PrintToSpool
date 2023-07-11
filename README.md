@@ -10,8 +10,7 @@ Find the single `.exe` executable in the `bin\Release\net6.0-windows\publish` fo
 2. Copy the executable to wherever you please.
 
 3. Open _File Explorer_, type `shell:sendTo` into the address bar. Create a shortcut here (`context menu > New > Shortcut`), point it to the exe (or, alternatively, create a shortcut
-to the Desktop and drag-and-drop it here). Practically, name it as your printer. Go back into _Properties,_ select an icon you like (an obvious choice would be the printer icon
-from `SHELL32.dll` but do as you please). Make sure your target is:
+to the Desktop and drag-and-drop it here). Practically, name it as your printer. Make sure your target is:
 
 ```
     "\path-to-the-executable\PrintToSpool.exe" "your-printer's-exact-name"
