@@ -26,7 +26,11 @@ you have the source. :-)
 I saw another solution here and there on the web that suggests to copy the already existing printer shortcut from `shell:PrintersFolder` to `shell:sendTo`. Unfortunately,
 that doesn't work, it will still expect document files (eg. a `.txt`) to process, not a raw print file. That's why I decided to write this one...
 
+## Want something simpler?
+
+Check out [SendToPrinter](https://apps.microsoft.com/detail/9PGDWHQFZ6MN), an UI-based, more comfortable approach to the dame.
+
 Enjoy it.
 
-_G·bor DE¡K JAHN<br>
+_G√°bor DE√ÅK JAHN<br>
 deakjahn@gmail.com_
