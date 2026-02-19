@@ -28,7 +28,7 @@ that doesn't work, it will still expect document files (eg. a `.txt`) to process
 
 ## Want something simpler?
 
-Check out [SendToPrinter](https://apps.microsoft.com/detail/9PGDWHQFZ6MN), an UI-based, more comfortable approach to the dame.
+Check out [SendToPrinter](https://apps.microsoft.com/detail/9PGDWHQFZ6MN), an UI-based, more comfortable approach to the same.
 
 Enjoy it.
 
