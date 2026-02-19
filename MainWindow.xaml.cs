@@ -18,7 +18,7 @@ namespace PrintToSpool {
       try {
         var DocInfo = new DOCINFO {
           pDocName = "RAW",
-          pDataType = "RAW"
+          pDataType = "XPS_PASS"
         };
 
         bool success = true;
